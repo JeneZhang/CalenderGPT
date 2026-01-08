@@ -1,0 +1,14 @@
+{
+  "base_timezone": "Asia/Shanghai",
+  "timezones": [
+    "Asia/Shanghai",
+    "Asia/Kolkata",
+    "Asia/Jerusalem",
+    "America/New_York"
+  ],
+  "tz_aliases": {
+    "Asia/Shanghai": "Beijing",
+    "Asia/Kolkata": "India",
+    "Asia/Jerusalem": "Isreal"
+  }
+}

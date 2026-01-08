@@ -1,0 +1,190 @@
+Attached HTML and CSS Context
+
+<aside class="sidePanel"><div class="panelTitle">Selected time</div><div class="panelMeta"><div class="panelMetaRow"><span class="metaLabel">Base:</span><span class="metaValue">09:30</span></div><div class="panelMetaRow"><span class="metaLabel">Overlap:</span><span class="metaValue">2/5 </span></div></div><div class="timesList"><div class="timeRow"><div class="timeTz">Asia/Shanghai</div><div class="timeVal ok">09:30</div></div><div class="timeRow"><div class="timeTz">America/Los Angeles</div><div class="timeVal ok">17:30</div></div><div class="timeRow"><div class="timeTz">America/New York</div><div class="timeVal off">20:30</div></div><div class="timeRow"><div class="timeTz">Asia/Kolkata</div><div class="timeVal off">07:00</div></div><div class="timeRow"><div class="timeTz">Asia/Jerusalem</div><div class="timeVal off">03:30</div></div></div></aside>
+
+
+/* Matched Rule from user-agent */
+article, aside, footer, header, hgroup, main, nav, search, section {
+  display: block;
+}
+
+/* Matched Rule from user-agent */
+address, blockquote, center, div, figure, figcaption, footer, form, header, hr, legend, listing, main, p, plaintext, pre, summary, xmp, article, aside, h1, h2, h3, h4, h5, h6, hgroup, nav, section, search, table, caption, colgroup, col, thead, tbody, tfoot, tr, td, th, dir, dd, dl, dt, menu, ol, ul, li, bdi, output, [dir="ltr" i], [dir="rtl" i], [dir="auto" i] {
+  unicode-bidi: isolate;
+}
+
+/* Matched Rule from regular */
+.sidePanel {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--panel);
+  padding: 12px 14px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+  padding-top: 12px;
+  padding-right: 14px;
+  padding-bottom: 12px;
+  padding-left: 14px;
+}
+
+/* Inherited from ancestor level 1 (user-agent) */
+article, aside, footer, header, hgroup, main, nav, search, section {
+  display: block;
+}
+
+/* Inherited from ancestor level 1 (user-agent) */
+address, blockquote, center, div, figure, figcaption, footer, form, header, hr, legend, listing, main, p, plaintext, pre, summary, xmp, article, aside, h1, h2, h3, h4, h5, h6, hgroup, nav, section, search, table, caption, colgroup, col, thead, tbody, tfoot, tr, td, th, dir, dd, dl, dt, menu, ol, ul, li, bdi, output, [dir="ltr" i], [dir="rtl" i], [dir="auto" i] {
+  unicode-bidi: isolate;
+}
+
+/* Inherited from ancestor level 1 (regular) */
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 16px;
+  padding: 16px 20px;
+  align-items: start;
+  display: grid;
+  grid-template-columns: minmax(0px, 1fr) 320px;
+  row-gap: 16px;
+  column-gap: 16px;
+  padding-top: 16px;
+  padding-right: 20px;
+  padding-bottom: 16px;
+  padding-left: 20px;
+  align-items: start;
+}
+
+/* Inherited from ancestor level 2 (user-agent) */
+div {
+  display: block;
+}
+
+/* Inherited from ancestor level 2 (user-agent) */
+address, blockquote, center, div, figure, figcaption, footer, form, header, hr, legend, listing, main, p, plaintext, pre, summary, xmp, article, aside, h1, h2, h3, h4, h5, h6, hgroup, nav, section, search, table, caption, colgroup, col, thead, tbody, tfoot, tr, td, th, dir, dd, dl, dt, menu, ol, ul, li, bdi, output, [dir="ltr" i], [dir="rtl" i], [dir="auto" i] {
+  unicode-bidi: isolate;
+}
+
+/* Inherited from ancestor level 2 (regular) */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Inherited from ancestor level 3 (user-agent) */
+div {
+  display: block;
+}
+
+/* Inherited from ancestor level 3 (user-agent) */
+address, blockquote, center, div, figure, figcaption, footer, form, header, hr, legend, listing, main, p, plaintext, pre, summary, xmp, article, aside, h1, h2, h3, h4, h5, h6, hgroup, nav, section, search, table, caption, colgroup, col, thead, tbody, tfoot, tr, td, th, dir, dd, dl, dt, menu, ol, ul, li, bdi, output, [dir="ltr" i], [dir="rtl" i], [dir="auto" i] {
+  unicode-bidi: isolate;
+}
+
+/* Inherited from ancestor level 4 (user-agent) */
+body {
+  display: block;
+  margin-top: 8px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  margin-left: 8px;
+}
+
+/* Inherited from ancestor level 4 (regular) */
+body {
+  margin: 0;
+  display: block;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  display: block;
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--text);
+}
+
+/* Inherited from ancestor level 5 (user-agent) */
+html {
+  display: block;
+}
+
+/* Inherited from ancestor level 5 (user-agent) */
+:root {
+  view-transition-name: root;
+}
+
+/* Inherited from ancestor level 5 (regular) */
+:root {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  --bg: #0f1115;
+  --panel: #141823;
+  --panel-2: #10131b;
+  --text: rgba(255, 255, 255, 0.9);
+  --muted: rgba(255, 255, 255, 0.68);
+  --border: rgba(255, 255, 255, 0.12);
+  --accent: #646cff;
+  --accent-2: #61dafb;
+  --danger: #ff6b6b;
+  --good: #4ade80;
+  --suggest: rgba(250, 204, 21, 0.22);
+  --warn: rgba(255, 255, 255, 0.14);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  --bg: #0f1115;
+  --panel: #141823;
+  --panel-2: #10131b;
+  --text: rgba(255, 255, 255, 0.9);
+  --muted: rgba(255, 255, 255, 0.68);
+  --border: rgba(255, 255, 255, 0.12);
+  --accent: #646cff;
+  --accent-2: #61dafb;
+  --danger: #ff6b6b;
+  --good: #4ade80;
+  --suggest: rgba(250, 204, 21, 0.22);
+  --warn: rgba(255, 255, 255, 0.14);
+  font-synthesis-weight: none;
+  font-synthesis-style: none;
+  font-synthesis-small-caps: none;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Inherited from ancestor level 5 (regular) */
+:root {
+  --bg: #f6f7fb;
+  --panel: #ffffff;
+  --panel-2: #f3f4f8;
+  --text: #1f2a37;
+  --muted: rgba(31, 42, 55, 0.72);
+  --border: rgba(31, 42, 55, 0.14);
+  --warn: rgba(31, 42, 55, 0.08);
+  --suggest: rgba(250, 204, 21, 0.18);
+  --bg: #f6f7fb;
+  --panel: #ffffff;
+  --panel-2: #f3f4f8;
+  --text: #1f2a37;
+  --muted: rgba(31, 42, 55, 0.72);
+  --border: rgba(31, 42, 55, 0.14);
+  --warn: rgba(31, 42, 55, 0.08);
+  --suggest: rgba(250, 204, 21, 0.18);
+}

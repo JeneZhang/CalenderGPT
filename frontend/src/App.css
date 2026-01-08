@@ -1,0 +1,631 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(180deg, var(--panel), var(--panel-2));
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.brandTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.brandLogo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  width: 28px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--warn);
+  flex: 0 0 auto;
+}
+
+.logo {
+  width: 18px;
+  height: 18px;
+}
+
+.logoPrimary {
+  stroke: var(--accent);
+}
+
+.logoSecondary {
+  stroke: var(--accent-2);
+}
+
+.brandTitle {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.brandSubtitle {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.topControls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.dateControls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn {
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  background: var(--warn);
+  color: inherit;
+  transition: background 120ms ease, border-color 120ms ease;
+}
+
+.btn:hover {
+  background: rgba(100, 108, 255, 0.08);
+  border-color: rgba(100, 108, 255, 0.35);
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.btnPrimary {
+  border-color: rgba(100, 108, 255, 0.5);
+}
+
+.dateInput {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--warn);
+  color: inherit;
+}
+
+.tzSearch {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tzPickerBtn {
+  padding: 8px 12px;
+}
+
+.tzDropdown {
+  position: absolute;
+  top: 44px;
+  left: 0;
+  width: min(520px, 86vw);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+  z-index: 10;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.tzSectionTitle {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 10px 12px;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--muted);
+  background: linear-gradient(180deg, var(--panel), var(--panel-2));
+  border-bottom: 1px solid var(--border);
+}
+
+.tzSectionHint {
+  padding: 10px 12px;
+  font-size: 12px;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border);
+}
+
+.tzOption {
+  width: 100%;
+  text-align: left;
+  padding: 10px 12px;
+  border: 0;
+  border-bottom: 1px solid var(--border);
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+}
+
+.tzOption:hover {
+  background: rgba(100, 108, 255, 0.08);
+}
+
+.tzOption.isDisabled,
+.tzOption:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 16px;
+  padding: 16px 20px;
+  align-items: start;
+}
+
+@media (max-width: 980px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.gridCard {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--panel);
+  overflow: hidden;
+}
+
+.gridTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(180deg, var(--panel), var(--panel-2));
+}
+
+.metaLine {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.metaLabel {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.metaValue {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.metaHint {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pill {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--muted);
+}
+
+.error {
+  padding: 10px 14px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: rgba(255, 107, 107, 0.12);
+  color: inherit;
+  font-size: 13px;
+}
+
+.gridWrap {
+  max-height: calc(100vh - 220px);
+  overflow: auto;
+}
+
+.outlookGrid {
+  --time-col: 96px;
+  --cell-w: 150px;
+  --cell-h: 42px;
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--time-col) repeat(var(--cols), minmax(140px, var(--cell-w)));
+  grid-auto-rows: var(--cell-h);
+  align-items: stretch;
+}
+
+.rowWrap {
+  display: contents;
+}
+
+.cell {
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 8px;
+  font-size: 12px;
+  background: var(--panel);
+  color: inherit;
+}
+
+.header {
+  font-weight: 700;
+  color: var(--muted);
+  background: var(--panel-2);
+}
+
+.corner {
+  justify-content: flex-start;
+  font-weight: 700;
+  background: var(--panel-2);
+}
+
+
+.tzHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.tzHeaderMain {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.tzHeaderName {
+  font-weight: 800;
+  color: var(--muted);
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tzHeaderActions {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;
+}
+
+.tzMenuBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 22px;
+  width: 26px;
+  padding: 0;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+  cursor: pointer;
+  line-height: 1;
+  font-size: 16px;
+}
+
+.tzMenuBtn:hover {
+  background: rgba(100, 108, 255, 0.08);
+}
+
+.tzMenu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 6px);
+  min-width: 140px;
+  padding: 6px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  z-index: 10;
+}
+
+.tzMenuItem {
+  width: 100%;
+  text-align: left;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.tzMenuItem:hover {
+  background: rgba(100, 108, 255, 0.08);
+}
+
+.tzMenuItem.isDisabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.tzMenuItem.isDisabled:hover {
+  background: transparent;
+}
+
+.tzHeaderEdit {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tzRenameInput {
+  flex: 1 1 auto;
+  min-width: 120px;
+  padding: 6px 8px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.06);
+  color: inherit;
+  font-size: 12px;
+}
+
+.timeCell {
+  justify-content: flex-end;
+  padding: 6px 10px;
+  background: var(--panel);
+}
+
+.timeLabel {
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
+
+.linkBtn {
+  padding: 2px 6px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.linkBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.slot {
+  border: 0;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--panel);
+  padding: 0;
+}
+
+.slotText {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+@media (prefers-color-scheme: light) {
+  .slotText {
+    color: rgba(31, 42, 55, 0.9);
+  }
+}
+
+.isOff {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.isWorking {
+  background: rgba(255, 255, 255, 0.065);
+}
+
+.isOverlap {
+  background: rgba(74, 222, 128, 0.16);
+}
+
+.isActive {
+  outline: 2px solid rgba(100, 108, 255, 0.45);
+  outline-offset: -2px;
+}
+
+.isSelected {
+  outline: 2px solid rgba(97, 218, 251, 0.55);
+  outline-offset: -2px;
+}
+
+.stickyTop {
+  position: sticky;
+  top: 0;
+  z-index: 4;
+}
+
+.stickyLeft {
+  position: sticky;
+  left: 0;
+  z-index: 3;
+}
+
+.stickyBoth {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.rowActive .slot,
+.rowActive .timeCell {
+  background: rgba(100, 108, 255, 0.06);
+}
+
+.rowSelected .slot,
+.rowSelected .timeCell {
+  background: rgba(97, 218, 251, 0.06);
+}
+
+.rowOverlap .slot,
+.rowOverlap .timeCell {
+  background: rgba(74, 222, 128, 0.08);
+}
+
+.rowSuggested .slot,
+.rowSuggested .timeCell {
+  background: var(--suggest);
+}
+
+.isSuggested {
+  background: var(--suggest);
+}
+
+.nowRowMarker {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc((var(--current-idx) + 1) * var(--cell-h));
+  pointer-events: none;
+  z-index: 6;
+}
+
+.nowRowLine {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  margin-top: -1px;
+  background: rgba(97, 218, 251, 0.7);
+}
+
+.nowRowLabel {
+  position: sticky;
+  left: 8px;
+  top: 0;
+  transform: translateY(-18px);
+  display: inline-block;
+  font-size: 11px;
+  color: rgba(97, 218, 251, 0.9);
+  background: rgba(97, 218, 251, 0.1);
+  border: 1px solid rgba(97, 218, 251, 0.25);
+  padding: 2px 6px;
+  border-radius: 999px;
+}
+
+.sidePanel {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--panel);
+  padding: 12px 14px;
+}
+
+.panelTitle {
+  font-weight: 800;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.panelHint {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.panelMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 10px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  margin-bottom: 10px;
+}
+
+.panelMetaRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.timesList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.timeRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 10px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.timeTz {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.timeVal {
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  font-variant-numeric: tabular-nums;
+}
+
+.timeVal.off {
+  color: var(--muted);
+}
+
+.timeVal.ok {
+  color: var(--good);
+  color: color-mix(in srgb, var(--good) 82%, var(--text));
+}
+
+.timeVal.suggest {
+  color: var(--suggest-text);
+  color: color-mix(in srgb, var(--suggest-text) 88%, var(--text));
+}
