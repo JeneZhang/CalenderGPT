@@ -1,6 +1,6 @@
 import './App.css'
 import { useEffect, useMemo, useRef, useState } from 'react'
-import type { SlotsResponse } from './api'
+import type { Settings, SlotsResponse } from './api'
 import { getSettings, getSlots, listTimezones, updateTimezones } from './api'
 
 function tzLabel(tz: string): string {
@@ -90,10 +90,7 @@ const DEFAULT_PINNED_TIMEZONES = [
 ]
 
 function App() {
-  const [settings, setSettings] = useState<{
-    base_timezone: string
-    timezones: string[]
-  } | null>(null)
+  const [settings, setSettings] = useState<Settings | null>(null)
 
   const [dayIso, setDayIso] = useState<string>(() => new Date().toISOString().slice(0, 10))
   const [slotsResp, setSlotsResp] = useState<SlotsResponse | null>(null)
